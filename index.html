@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rammiron's visit card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 1px #ffffff;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-link {
+            color: white;
+            filter: drop-shadow(0 0 2px #fff7f7);
+            text-decoration: none;
+            font-size: 2em;
+            transition: transform 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.2);
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>rammiron</h1>
+    <h2 align="center">"An investment in knowledge pays the best interest. "</h2>
+
+
+    <div class="social-links">
+        <a href="https://github.com/rammiron" class="social-link"><img src="images/github_logo.png" alt="github" width="50" height="50"></a>
+        <a href="https://t.me/rammiron_bio" class="social-link"><img src="images/tg_channel.png" alt="tg_channel" width="50" height="50"></a>
+        <a href="https://steamcommunity.com/id/rammiron666/" class="social-link"><img src="images/steam.png" alt="steam" width="45" height="45"></a>
+        <a href="https://discordapp.com/users/1048600490562293850/ " class="social-link"><img src="images/discord_logo.png" alt="discord" width="45" height="45"></a>
+    </div>
+
+    <script>
+        const createStar = () => {
+            const star = document.createElement('div');
+            const size = Math.random() * 5 + 2; // 2px to 7px
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            star.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+            star.classList.add('star');
+            document.body.appendChild(star);
+
+            star.style.top = '-10px'; // Starting point
+
+            star.addEventListener('animationend', () => {
+                star.remove();
+            });
+        }
+
+        setInterval(createStar, 200); 
+    </script>
+</body>
+</html>
