@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nick {
+    font-size: 31px;
+    font-weight: light;
+}
+
+#profile_photo {
+    transition: 1.5s;
+    opacity: 0%;
+}
+
+button {
+    transition: 0.3s;
+    position: relative;
+    bottom: 0;
+}
+
+button:hover {
+    bottom: 10px;
+}
+
+body {
+    font-family: 'Segoe UI';
+    color: aliceblue;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+}
+
+#root {
+    z-index: 999;
+    overflow: hidden;
+    text-align: center;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+#window {
+    scale: 0.9;
+    transition: 0.5s;
+    z-index: 2;
+    border-radius: 10px;
+    text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.171);*/
+    backdrop-filter: blur(25px);
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.1), rgba(128, 0, 128, 0.1), rgba(81, 81, 240, 0.1));
+}
+
+
+.area{
+    background: #10122c;  
+    background: -webkit-linear-gradient(to left, #00aeff, #000dfd);  
+    width: 100%;
+    height:100vh;
+}
+
+.description {
+    font-size: 22px;
+}
+
+#Sub-Title {
+    opacity: 50%;
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

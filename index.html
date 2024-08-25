@@ -1,124 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="static/img/github.png" sizes="100x100">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rammiron's visit card</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            overflow: hidden;
-            color: white;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1); 
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-        }
-
-        #name {
-            font-size: 3em;
-            text-shadow: 0 0 2px #ffffff;
-            margin: 0;
-        }
-
-        .bio {
-            margin: 10px 0;
-            font-size: 1.5em;
-        }
-
-        #quote {
-            font-style: italic;
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        
-        .contact-title {
-            margin-bottom: 10px; 
-            font-size: 1.1em;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 5px; 
-        }
-        
-        .social-link {
-            color: white;
-            filter: drop-shadow(0 0 1px #fff7f7);
-            text-decoration: none;
-            font-size: 2em;
-            transition: transform 0.3s;
-        }
-        
-        .social-link:hover {
-            transform: scale(1.2);
-        }
-        
-        .star {
-            position: absolute;
-            z-index: -1;
-            background: white;
-            border-radius: 50%;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-    </style>
+    <title>rammiron visit card</title>
 </head>
 <body>
-
-    <div class="container">
-        <h1 id="name">rammiron</h1>
-        <h2 class="bio">Hello, I'm a C#/Python developer!</h2>
-        <h2 class="bio">Do you need a telegram/discord bot?</h2>
-        <h2 class="bio">You are at the right place!</h2>
-        <h2 class="contact-title">Contact me:</h2> 
-
-        <div class="social-links">
-            <a href="https://github.com/rammiron" class="social-link"><img src="images/github_logo.png" alt="github" width="50" height="50"></a>
-            <a href="https://t.me/rammiron_bio" class="social-link"><img src="images/tg_channel.png" alt="tg_channel" width="50" height="50"></a>
-            <a href="https://steamcommunity.com/id/rammiron666/" class="social-link"><img src="images/steam.png" alt="steam" width="45" height="45"></a>
-            <a href="https://discordapp.com/users/1048600490562293850/" class="social-link"><img src="images/discord_logo.png" alt="discord" width="45" height="45"></a>
+    <div id="root">
+        <img src="static/img/profile_photo.png" width="200px" style="border-radius: 360px; position: relative; top: 75px; z-index: 2;" id="profile_photo">
+        <div id="window">
+            <br><br><br>
+            <span class="nick">rammiron<img src="static/img/status.png" width="31px" style="position: relative; top: 7px; left: 4px;"></span>
+            <br>
+            <span id="Sub-Title">"An investment in knowledge pays the best interest."</span>
+            <br><br>
+            <p>
+                <span class="description">
+                    Hello, I'm a C#/Python developer!
+                    <br>
+                    Do you need a telegram/discord bot?
+                    <br>
+                    You are at the right place!
+                </span>
+            </p>
+            <br>
+            <button style="background: transparent; border: 0; outline: none;" onclick="relink(1)"><img src="static/img/github.png" width="70px"></button>
+            <button style="background: transparent; border: 0; outline: none;" onclick="relink(2)"><img src="static/img/tg.png" width="70px"></button>
+            <button style="background: transparent; border: 0; outline: none;" onclick="relink(3)"><img src="static/img/steam.png" width="70px"></button>
+            <button style="background: transparent; border: 0; outline: none;" onclick="relink(4)"><img src="static/img/discord.png" width="70px"></button>
         </div>
     </div>
-
-    <script>
-        const createStar = () => {
-            const star = document.createElement('div');
-            const size = Math.random() * 5 + 2; 
-            star.style.width = size + 'px';
-            star.style.height = size + 'px';
-            star.style.left = Math.random() * window.innerWidth + 'px';
-            star.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
-            star.classList.add('star');
-            document.body.appendChild(star);
-
-            star.style.top = '-10px'; 
-
-            star.addEventListener('animationend', () => {
-                star.remove();
-            });
-        }
-        setInterval(createStar, 200); 
-    </script>
+    <!--BG Layout-->
+    <div class="area">
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
