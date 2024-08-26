@@ -9,6 +9,7 @@
 }
 
 #profile_photo {
+    border: rgba(255, 255, 255, 0.1) solid 5px;
     transition: 1.5s;
     opacity: 0%;
 }
@@ -45,6 +46,30 @@ body {
     translate: -50% -50%;
 }
 
+#queMark {
+    transition: 0.2s;
+}
+
+#queMark:focus {
+    opacity: 100%;
+}
+
+#subQue {
+    opacity: 0%;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#que {
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    padding: 15px;
+}
+
 #window {
     scale: 0.9;
     transition: 0.5s;
@@ -64,7 +89,9 @@ body {
     height:100vh;
 }
 
-.description {
+#description {
+    transition: 0.8s;
+    opacity: 0%;
     font-size: 22px;
 }
 
@@ -90,7 +117,7 @@ body {
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 10s linear infinite;
+    animation: animate 25s linear infinite;
     bottom: -150px;
     
 }

@@ -8,16 +8,22 @@
     <title>rammiron visit card</title>
 </head>
 <body>
+    <div id="que">
+        <div id="subQue">
+            <span>Created by Wertywin2353, v.2</span>
+        </div>
+        <img src="static/img/q.png" width="30px" style="margin-left: 7px;" id="queMark" onclick="showPopup()">
+    </div>
     <div id="root">
-        <img src="static/img/profile_photo.png" width="200px" style="border-radius: 360px; position: relative; top: 75px; z-index: 2;" id="profile_photo">
+            <img src="static/img/profile_photo.png" width="200px" style="border-radius: 360px; position: relative; top: 75px; z-index: 2;" id="profile_photo" onclick="playTheme(this)">
         <div id="window">
-            <br><br><br>
+            <br><br><br><br>
             <span class="nick">rammiron<img src="static/img/status.png" width="31px" style="position: relative; top: 7px; left: 4px;"></span>
             <br>
             <span id="Sub-Title">"An investment in knowledge pays the best interest."</span>
             <br><br>
             <p>
-                <span class="description">
+                <span id="description">
                     Hello, I'm a C#/Python developer!
                     <br>
                     Do you need a telegram/discord bot?
@@ -30,6 +36,7 @@
             <button style="background: transparent; border: 0; outline: none;" onclick="relink(2)"><img src="static/img/tg.png" width="70px"></button>
             <button style="background: transparent; border: 0; outline: none;" onclick="relink(3)"><img src="static/img/steam.png" width="70px"></button>
             <button style="background: transparent; border: 0; outline: none;" onclick="relink(4)"><img src="static/img/discord.png" width="70px"></button>
+            <br>
         </div>
     </div>
     <!--BG Layout-->
@@ -47,6 +54,7 @@
                 <li></li>
         </ul>
     </div>
+    <script src="js/LazyLib-L.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
